@@ -36,7 +36,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.yourapp.app.YourMainClass</mainClass>
+              <mainClass>com.github.nekop.standalone.Main</mainClass>
             </manifest>
           </archive>
         </configuration>

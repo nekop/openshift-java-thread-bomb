@@ -1,9 +1,8 @@
 package com.github.nekop.standalone;
 
 public class Main {
-    private static final long EXIT_TIMEOUT_MILLIS = 30000;
     public static void main(String[] args) throws Exception {
-        long start = System.currentTimeMillis();
+        // This main method will exit with OutOfMemoryError and the process remains forever with a lot of sleeping threads
         int i = 0;
         while (true) {
             new Thread(() -> {
@@ -13,9 +12,6 @@ public class Main {
             }).start();
             System.out.println("Thread started #" + i);
             i++;
-            if (System.currentTimeMillis() - start > EXIT_TIMEOUT_MILLIS) {
-                System.exit(0);
-            }
         }
     }
     
